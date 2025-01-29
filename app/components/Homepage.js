@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Header from './Header';
 import { FaTerminal, FaBootstrap, FaCss3Alt, FaReact, FaJava, FaLeaf, FaGithub, FaPaintBrush, FaPencilAlt, FaMicrosoft, FaSlack, FaGoogleDrive } from 'react-icons/fa';
-
+import backgroundImage from '../public/images/mountain-home.png'
 
 const HomePage = () => {
 
@@ -29,7 +29,7 @@ const HomePage = () => {
       <Header/>
       <div className="relative">
         <Image
-          src="/images/Mountain home.png"
+          src={backgroundImage}
           alt="Mountain Home"
           width={1920}
           height={1080}
@@ -41,6 +41,7 @@ const HomePage = () => {
             objectFit: 'cover', // Ensures the image fills the container
           }}
         />
+
       </div>
       {/* Content Section */}
       <section className="absolute z-10 flex justify-center items-center bottom-10 w-full min-h-screen md:h-screen" id="home">
