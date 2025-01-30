@@ -40,6 +40,7 @@ const ImagesGallery = () => {
           {images.map((image, index) => (
             <div key={index} className="relative flex-shrink-0 w-full md:w-1/3 group">
               <Image
+                layout="responsive" // This will make the image responsive
                 src={image.desktopSrc}
                 alt={image.alt}
                 width={1920}
