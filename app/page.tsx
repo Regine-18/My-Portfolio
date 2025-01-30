@@ -27,7 +27,7 @@ export default function Home() {
         <section id="portfolio">
           <Portfolio />
         </section>
-        <section id="section">
+        <section id="contact">
           <Contact />
         </section>
       </div>

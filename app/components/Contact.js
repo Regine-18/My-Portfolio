@@ -3,7 +3,8 @@ import React from 'react';
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => (
-  <div className="w-full max-w-full text-center h-screen flex justify-center flex-col px-10">
+  <div className="flex justify-center items-center text-center px-10 md:h-screen">
+  <div className="section-title">
     <div className="section-title">
       <h1 className="font-bold text-white">Contact</h1>
       <h2 className="">
@@ -45,6 +46,7 @@ const Contact = () => (
         <span className="text-pblue italic"> Next.js</span> and <span className="text-pblue italic">Tailwind CSS</span>, 
         and deployed on <span className="text-pblue italic">Vercel</span>
       </p>
+    </div>
     </div>
   </div>
 );
