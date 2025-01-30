@@ -52,7 +52,7 @@ const Services = () => {
     <div className="flex items-center justify-center md:h-screen" id="services">
       <div className="w-full max-w-7xl">
         <div className="section-title text-center">
-          <h1 className="font-bold mb-2 text-white">Services</h1>
+          <h1 className="font-bold text-white">Services</h1>
           <h2 className="text-pblue">
             <span className="text-pblue">Sailing </span>
             <span className="text-pwhite">beyond </span>

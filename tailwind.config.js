@@ -27,7 +27,12 @@ module.exports = {
         'smoke-gray': 'rgba(215, 207, 232, 0.35)',
       },
       backgroundImage: {
-        blueGradient: `linear-gradient(to right, 
+        lightGradient:`linear-gradient(to right,
+        rgba(4, 71, 122, 1) 1%,    /* #04477a */
+        rgba(4, 71, 123, 1) 12%,   /* #04477b */
+        rgba(4, 71, 123, 1) 20%,   /* #04477b */
+        rgba(1, 28, 51, 1) 100%    /* #011c33 */)`,
+        darkGradient: `linear-gradient(to right, 
         rgba(0, 27, 48) 13%, 
         rgba(8, 41, 67) 19%, 
         rgba(5, 40, 67) 26%, 

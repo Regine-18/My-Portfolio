@@ -66,7 +66,7 @@ const Header = () => {
     <header>
       <nav
         className={`nav-container fixed top-0 z-50 w-full p-4 transition-all duration-300 ${
-          isScrolled ? 'bg-blueGradient' : 'shadow-md'
+          isScrolled ? 'dark:bg-darkGradient bg-lightGradient' : 'shadow-md'
         }`}
       >
         <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 h-full relative">
@@ -84,7 +84,7 @@ const Header = () => {
           </button>
 
           {/* Logo */}
-          <h1 className="text-3xl font-bold mr-8 hidden md:block">
+          <h1 className="text-pwhite text-3xl font-bold mr-8 hidden md:block">
             Reg
             <span className="italic inline-flex items-center">
               <FaPaintBrush className="text-pblue mx-1 text-xs" style={{ width: '30px', height: '30px' }} />
