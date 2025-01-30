@@ -49,9 +49,9 @@ module.exports = {
           rgba(0, 27, 48, 0.8) 5%, 
           rgba(23, 50, 71, 0.8) 15%,  /* #173247 with 0.8 opacity */
           rgba(8, 41, 67, 0.8) 30%, 
-          rgba(5, 40, 67, 0.80) 26%, 
-          rgba(11, 35, 53, 0.8) 43%, 
-          rgba(12, 27, 38) 100%)`,
+          rgba(5, 40, 67, 0.8) 26%, 
+          rgba(11, 35, 53, 0.9) 43%, 
+          rgba(12, 27, 38, 0.9) 100%)`,
         'column-background': `linear-gradient(to bottom, 
           rgba(37, 225, 254, 0.5) 0%, 
           rgba(10, 42, 67, 1) 63%
