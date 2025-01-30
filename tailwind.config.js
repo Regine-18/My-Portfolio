@@ -34,7 +34,7 @@ module.exports = {
         rgba(11, 35, 53) 43%, 
         rgba(12, 27, 38) 100%)`,
         'light-mode': `linear-gradient(to bottom, 
-        rgba(60, 116, 165, 1) 1%,  /* #3c74a5 */
+        rgba(60, 116, 165, 1) 1%,  
         rgba(4, 71, 122, 1) 8%,    /* #04477a */
         rgba(4, 71, 123, 1) 12%,   /* #04477b */
         rgba(5, 51, 92, 1) 20%,    /* #05335c */
