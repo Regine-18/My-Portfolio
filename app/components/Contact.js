@@ -3,7 +3,7 @@ import React from 'react';
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => (
-  <div className="flex justify-center items-center text-center px-10 md:h-screen">
+  <div className="flex justify-center items-center text-center px-10 min-h-screen lg:h-screen">
   <div className="section-title">
     <div className="section-title">
       <h1 className="font-bold text-white">Contact</h1>
