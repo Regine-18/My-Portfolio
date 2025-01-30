@@ -46,11 +46,11 @@ module.exports = {
         rgba(12, 88, 106, 1) 70%,  /* #0c586a */
         rgba(1, 28, 51, 1) 100%    /* #011c33 */)`, /* Deep Ocean Blue */
         'dark-mode': `linear-gradient(to bottom, 
-          rgba(0, 27, 48, 0.7) 3%, 
-          rgba(23, 50, 71, 0.8) 15%,  /* #173247 with 0.8 opacity */
-          rgba(5, 40, 67, 0.80) 30%, 
-          rgba(11, 35, 53, 0.8) 75%, 
-          rgba(12, 27, 38, 0.7) 100%)`,
+         rgba(0, 27, 48, 0.7) 3%,
+        rgba(23, 50, 71, 0.8) 15%,  /* #173247 with 0.8 opacity */
+        rgba(5, 40, 67, 0.8) 30%, 
+        rgba(11, 35, 53, 0.8) 75%, 
+        rgba(12, 27, 38, 0.7) 100%)`,
         'column-background': `linear-gradient(to bottom, 
           rgba(37, 225, 254, 0.5) 0%, 
           rgba(10, 42, 67, 1) 63%
