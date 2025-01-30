@@ -34,11 +34,12 @@ module.exports = {
         rgba(11, 35, 53) 43%, 
         rgba(12, 27, 38) 100%)`,
         'light-mode': `linear-gradient(to bottom, 
- rgba(18, 63, 102, 1) 10%,  /* Deep Ocean Blue */
-  rgba(52, 90, 133, 1) 30%,  /* Cool Blue */
-  rgba(8, 98, 123, 1) 50%,   /* Vibrant Teal */
-  rgba(0, 51, 79, 1) 70%,    /* Dark Aqua */
-  rgba(0, 32, 55, 1) 100%    /* Deepest Ocean */)`, /* Deep Ocean Blue */
+        rgba(60, 116, 165, 1) 1%,  /* #3c74a5 */
+        rgba(4, 71, 122, 1) 8%,    /* #04477a */
+        rgba(4, 71, 123, 1) 12%,   /* #04477b */
+        rgba(5, 51, 92, 1) 20%,    /* #05335c */
+        rgba(12, 88, 106, 1) 70%,  /* #0c586a */
+        rgba(1, 28, 51, 1) 100%    /* #011c33 */)`, /* Deep Ocean Blue */
         'dark-mode': `linear-gradient(to bottom, 
           rgba(0, 27, 48, 0.8) 13%, 
           rgba(8, 41, 67, 0.8) 19%, 
