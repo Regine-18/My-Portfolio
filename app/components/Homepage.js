@@ -55,7 +55,7 @@ const HomePage = () => {
         <h2 className="text-dark-seafoam job-desc">
           Web Developer & Freelance UI/UX Designer
         </h2>
-        <p className="detailed my-4">
+        <p className="detailed mt-2 mb-6">
           <span className="text-darkPaleDescription">With a </span>
           <span className="text-hlightGray">year of experience, </span>
           <span className="text-darkPaleDescription hidden sm:inline">as a Junior System Developer,</span>
@@ -67,7 +67,7 @@ const HomePage = () => {
           <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
         </p>
     
-        <button className="mb-2 mt-3">
+        <button className="mb-8">
           <a
             href="#portfolio"
             className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
