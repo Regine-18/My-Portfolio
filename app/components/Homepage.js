@@ -44,9 +44,8 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 flex flex-col justify-between items-center w-full h-screen px-4" id="home">
-      {/* Home Info */}
-      <div className="home-info max-w-7xl text-center flex-grow flex flex-col justify-center">
+      <section className="absolute z-10 flex flex-col justify-center items-center w-full min-h-screen md:h-screen space-y-8 lg:space-y-16" id="home">
+      <div className="home-info max-w-7xl px-4 text-center">
         <h1 className="text-pwhite name-desc mb-2">
           <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
           Regine Galanaga
@@ -67,10 +66,10 @@ const HomePage = () => {
           <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
         </p>
     
-        <button className="mb-8">
+        <button className="mb-12 lg:mb-5">
           <a
             href="#portfolio"
-            className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
+            className="mt-12 bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
             aria-label="Explore my portfolio"
           >
             Explore my portfolio
@@ -78,8 +77,8 @@ const HomePage = () => {
         </button>
       </div>
     
-      {/* Tech Skills Section - Positioned near bottom */}
-      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full pb-8 lg:pb-12">
+      {/* Tech Skills Section */}
+      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full py-8 lg:py-16">
         <div className="icon-track flex flex-nowrap gap-6">
           {icons.map((item, index) => (
             <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
