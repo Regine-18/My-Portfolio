@@ -24,7 +24,7 @@ const HomePage = () => {
     ];
 
   return (
-    <div className="mb-0 min-h-screen md:h-screen relative">
+    <div className="mb-0 h-screen relative">
       {/* Background Image */}
       <Header/>
       <div className="relative">
@@ -44,7 +44,7 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 flex justify-center items-center bottom-10 w-full min-h-screen md:h-screen" id="home">
+      <section className="absolute z-10 flex justify-center items-center bottom-0 w-full min-h-screen md:h-screen" id="home">
         <div className="home-info max-w-7xl px-4">
           {/* Name and Job Description */}
           <div className="text-center">
