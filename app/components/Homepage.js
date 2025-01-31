@@ -24,7 +24,7 @@ const HomePage = () => {
     ];
 
   return (
-    <div className="mb-0 h-screen relative">
+    <div className="h-screen">
       {/* Background Image */}
       <Header/>
       <div className="relative">
@@ -44,7 +44,7 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 flex justify-center items-center bottom-0 w-full min-h-screen md:h-screen" id="home">
+      <section className="absolute z-10 flex justify-center items-center w-full min-h-screen md:h-screen" id="home">
         <div className="home-info max-w-7xl px-4">
           {/* Name and Job Description */}
           <div className="text-center">
@@ -80,20 +80,20 @@ const HomePage = () => {
                 Explore my portfolio
               </a>
             </button>
+
+                    {/* Icon Slider */}
+        <div className="absolute left-0 w-full z-10 my-8">
+        <div className="icon-slider overflow-x-auto scroll-snap-x mandatory">
+          <div className="icon-track flex flex-nowrap gap-6">
+          {icons.map((item, index) => (
+            <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
+              <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
+              <span className="text-hlightGray item-label">{item.label}</span>
+            </div>
+          ))}
           </div>
         </div>
-
-        {/* Icon Slider */}
-        <div className="absolute bottom-1 left-0 w-full z-10">
-          <div className="icon-slider overflow-x-auto scroll-snap-x mandatory">
-            <div className="icon-track flex flex-nowrap gap-6">
-            {icons.map((item, index) => (
-              <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
-                <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
-                <span className="text-hlightGray item-label">{item.label}</span>
-              </div>
-            ))}
-            </div>
+      </div>
           </div>
         </div>
       </section>
