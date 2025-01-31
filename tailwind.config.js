@@ -42,7 +42,7 @@ module.exports = {
         rgba(92, 129, 162, 1) 1%,   /* #5c81a2 */
         rgba(3, 78, 136, 1) 8%,    /* #034e88 */
         rgba(7, 42, 69, 1) 40%,
-       rgba(7, 47, 69, 0.7) 70%,
+       rgba(7, 47, 69, 1) 70%,
         rgba(1, 28, 51, 1) 100%    /* #011c33 */)`, /* Deep Ocean Blue */
         oceanFog: `linear-gradient(to bottom, 
         rgba(92, 129, 162, 0.7) 1%,    /* #5c81a2 */
