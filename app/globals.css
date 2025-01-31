@@ -19,13 +19,7 @@ body, html {
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.2rem, 5vw, 2.2rem); /* Responsive font size */
-}
-
-
-p {
-  font-family: 'Nunito Sans', sans-serif;
 }
 
  /* Adjust the paragraph font size across sections */
@@ -35,7 +29,6 @@ p {
 
 button, input {
   letter-spacing: .6px;
-  font-family: 'Roboto', sans-serif;
   font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
 }
 
