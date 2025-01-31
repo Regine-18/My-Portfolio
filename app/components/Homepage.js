@@ -7,26 +7,26 @@ import backgroundImage from '../public/images/mountain-home.png'
 const HomePage = () => {
 
 
-  // Array of icons and their labels
-  const icons = [
-    { Icon: FaTerminal, label: 'VS Code' },
-    { Icon: FaBootstrap, label: 'Bootstrap' },
-    { Icon: FaCss3Alt, label: 'CSS' },
-    { Icon: FaReact, label: 'React' },
-    { Icon: FaJava, label: 'Java' },
-    { Icon: FaLeaf, label: 'Spring Boot / MVC' },
-    { Icon: FaGithub, label: 'GitHub' },
-    { Icon: FaPaintBrush, label: 'Adobe Photoshop' },
-    { Icon: FaPencilAlt, label: 'Canva' },
-    { Icon: FaMicrosoft, label: 'Microsoft' },
-    { Icon: FaSlack, label: 'Slack' },
-    { Icon: FaGoogleDrive, label: 'Google Drive' },
-  ];
+    // Array of icons and their labels
+    const icons = [
+      { Icon: FaTerminal, label: 'VS Code' },
+      { Icon: FaBootstrap, label: 'Bootstrap' },
+      { Icon: FaCss3Alt, label: 'CSS' },
+      { Icon: FaReact, label: 'React' },
+      { Icon: FaJava, label: 'Java' },
+      { Icon: FaLeaf, label: 'Spring Boot / MVC' },
+      { Icon: FaGithub, label: 'GitHub' },
+      { Icon: FaPaintBrush, label: 'Adobe Photoshop' },
+      { Icon: FaPencilAlt, label: 'Canva' },
+      { Icon: FaMicrosoft, label: 'Microsoft' },
+      { Icon: FaSlack, label: 'Slack' },
+      { Icon: FaGoogleDrive, label: 'Google Drive' },
+    ];
 
   return (
     <div className="h-screen">
       {/* Background Image */}
-      <Header />
+      <Header/>
       <div className="relative">
         <Image
           src={backgroundImage}
@@ -44,52 +44,54 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 flex flex-col justify-center items-center w-full min-h-screen md:h-screen space-y-8" id="home">
-        <div className="home-info max-w-7xl px-4 text-center">
-          <h1 className="text-pwhite name-desc mb-2">
-            <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
-            Regine Galanaga
-            <span className="hidden sm:inline">, your</span>
-          </h1>
-          <h2 className="text-dark-seafoam job-desc">
-            Web Developer & Freelance UI/UX Designer
-          </h2>
-          <p className="detailed mt-2 mb-6">
-            <span className="text-darkPaleDescription">With a </span>
-            <span className="text-hlightGray">year of experience, </span>
-            <span className="text-darkPaleDescription hidden sm:inline">as a Junior System Developer,</span>
-            <span className="text-darkPaleDescription">I focus on</span>
-            <span className="text-hlightGray"> testing, designing, and web development</span>
-            <span className="text-hlightGray hidden sm:inline"> to create user-centered solutions</span>
-            <span className="text-darkPaleDescription hidden sm:inline">, leveraging my</span>
-            <span className="text-hlightGray hidden sm:inline"> sharp attention to detail</span>
-            <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
-          </p>
-
-          <button>
-            <a
-              href="#portfolio"
-              className="mt-12 bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
-              aria-label="Explore my portfolio"
-            >
-              Explore my portfolio
-            </a>
-          </button>
+      <section className="absolute z-10 flex flex-col justify-between items-center w-full h-screen px-4" id="home">
+      {/* Home Info */}
+      <div className="home-info max-w-7xl text-center flex-grow flex flex-col justify-center">
+        <h1 className="text-pwhite name-desc mb-2">
+          <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
+          Regine Galanaga
+          <span className="hidden sm:inline">, your</span>
+        </h1>
+        <h2 className="text-dark-seafoam job-desc">
+          Web Developer & Freelance UI/UX Designer
+        </h2>
+        <p className="detailed mt-2 mb-6">
+          <span className="text-darkPaleDescription">With a </span>
+          <span className="text-hlightGray">year of experience, </span>
+          <span className="text-darkPaleDescription hidden sm:inline">as a Junior System Developer,</span>
+          <span className="text-darkPaleDescription">I focus on</span>
+          <span className="text-hlightGray"> testing, designing, and web development</span>
+          <span className="text-hlightGray hidden sm:inline"> to create user-centered solutions</span>
+          <span className="text-darkPaleDescription hidden sm:inline">, leveraging my</span>
+          <span className="text-hlightGray hidden sm:inline"> sharp attention to detail</span>
+          <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
+        </p>
+    
+        <button className="mb-8 mt-3">
+          <a
+            href="#portfolio"
+            className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
+            aria-label="Explore my portfolio"
+          >
+            Explore my portfolio
+          </a>
+        </button>
+      </div>
+    
+      {/* Tech Skills Section - Positioned near bottom */}
+      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full pb-8 lg:pb-12">
+        <div className="icon-track flex flex-nowrap gap-6">
+          {icons.map((item, index) => (
+            <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
+              <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
+              <span className="text-hlightGray item-label">{item.label}</span>
+            </div>
+          ))}
         </div>
-
-        {/* Tech Skills Section */}
-        <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full">
-          <div className="icon-track flex flex-nowrap gap-6">
-            {icons.map((item, index) => (
-              <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
-                <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
-                <span className="text-hlightGray item-label">{item.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      </div>
+    </section>
+    
+    
     </div>
   );
 };
