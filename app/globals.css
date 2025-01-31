@@ -23,12 +23,13 @@ h1, h2, h3 {
   font-size: clamp(1.2rem, 5vw, 2.2rem); /* Responsive font size */
 }
 
+
 p {
   font-family: 'Nunito Sans', sans-serif;
 }
 
  /* Adjust the paragraph font size across sections */
- .detailed, #about-me p, #skills, #services p, #contact p{
+ .detailed, #about-me p, #skills, #services p, #contact{
   font-size: clamp(1.1rem, 4vw, 1.2rem); /* Made slightly smaller */
 }
 

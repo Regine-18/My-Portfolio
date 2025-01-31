@@ -24,7 +24,7 @@ const HomePage = () => {
     ];
 
   return (
-    <div className="mb-0 h-screen relative">
+    <div className="mb-0 min-h-screen md:h-screen relative">
       {/* Background Image */}
       <Header/>
       <div className="relative">
