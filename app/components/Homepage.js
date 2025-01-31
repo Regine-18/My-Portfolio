@@ -26,7 +26,6 @@ const HomePage = () => {
   return (
     <div className="h-screen">
       {/* Background Image */}
-      <Header/>
       <div className="relative">
         <Image
           src={backgroundImage}
