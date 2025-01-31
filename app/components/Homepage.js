@@ -24,7 +24,7 @@ const HomePage = () => {
     ];
 
   return (
-    <div className="h-screen">
+    <div className="min-h-screen md:h-screen">
       {/* Background Image */}
       <Header/>
       <div className="relative">
@@ -44,8 +44,9 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 flex flex-col justify-center items-center w-full min-h-screen md:h-screen space-y-8 lg:space-y-16" id="home">
-      <div className="home-info max-w-7xl px-4 text-center">
+      <section className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center h-screen px-4 my-6">
+      {/* Home Info */}
+      <div className="home-info max-w-7xl text-center">
         <h1 className="text-pwhite name-desc mb-2">
           <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
           Regine Galanaga
@@ -66,10 +67,10 @@ const HomePage = () => {
           <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
         </p>
     
-        <button className="mb-12 lg:mb-5">
+        <button className="my-4">
           <a
             href="#portfolio"
-            className="mt-12 bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
+            className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
             aria-label="Explore my portfolio"
           >
             Explore my portfolio
@@ -77,8 +78,8 @@ const HomePage = () => {
         </button>
       </div>
     
-      {/* Tech Skills Section */}
-      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full py-8 lg:py-16">
+      {/* Tech Skills Section - Positioned near bottom but balanced */}
+      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full pb-16 md:pb-15 lg:pb-24">
         <div className="icon-track flex flex-nowrap gap-6">
           {icons.map((item, index) => (
             <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
