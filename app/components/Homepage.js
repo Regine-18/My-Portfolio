@@ -44,9 +44,9 @@ const HomePage = () => {
 
       </div>
       {/* Content Section */}
-      <section className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center h-screen px-4 my-6">
+      <section className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center min-h-screen h-screen px-4 my-6 gap-16 sm:gap-8">
       {/* Home Info */}
-      <div className="home-info max-w-7xl text-center">
+      <div className="home-info max-w-7xl text-center md:mb-12 ">
         <h1 className="text-pwhite name-desc mb-2">
           <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
           Regine Galanaga
@@ -79,7 +79,7 @@ const HomePage = () => {
       </div>
     
       {/* Tech Skills Section - Positioned near bottom but balanced */}
-      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full pb-16 md:pb-15 lg:pb-24">
+      <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full pb-16 md:pb-20 lg:pb-24">
         <div className="icon-track flex flex-nowrap gap-6">
           {icons.map((item, index) => (
             <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
