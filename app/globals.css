@@ -27,6 +27,7 @@ h1, h2, h3 {
   font-size: clamp(1.1rem, 4vw, 1.2rem); /* Made slightly smaller */
 }
 
+
 button, input {
   letter-spacing: .6px;
   font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */

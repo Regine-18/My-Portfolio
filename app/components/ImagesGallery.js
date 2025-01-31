@@ -38,7 +38,7 @@ const ImagesGallery = () => {
       <div className="overflow-x-auto">
         <div className="flex gap-6">
           {images.map((image, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full md:w-1/3 group">
+            <div key={index} className="relative flex-shrink-0 w-full md:w-1/3 group ">
               <Image
                 src={image.desktopSrc}
                 alt={image.alt}
@@ -48,18 +48,19 @@ const ImagesGallery = () => {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
+                  borderRadius:'20px',
                 }}
                 placeholder="blur"
                 priority
               />
 
               {/* Overlay with background and text */}
-              <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-[3px] flex justify-center items-center">
+              <div className="rounded-2xl absolute inset-0 bg-black bg-opacity-20 backdrop-blur-[1px] flex justify-center items-center">
                 <p className="text-lg text-center text-white px-4 font-semibold ">{image.title}</p>
               </div>
 
               {/* Description (visible on hover) */}
-              <div className="absolute inset-0 flex justify-center items-center bg-seafoam text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="rounded-2xl absolute inset-0 flex justify-center items-center bg-seafoam text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <p className="text-lg text-center px-4 ">{image.description}</p>
               </div>
             </div>
