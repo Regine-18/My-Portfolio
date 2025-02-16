@@ -12,7 +12,6 @@ const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // Handle window resize to detect mobile view
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 767);
     handleResize(); // Run on initial render

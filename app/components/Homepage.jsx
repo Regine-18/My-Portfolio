@@ -51,8 +51,8 @@ const HomePage = () => {
           }}
         />
       </div>
-      <div className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center min-h-screen h-screen px-4 gap-14 md:gap-14">
-        <div className="max-w-7xl text-center">
+      <div className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center min-h-screen h-screen gap-14 md:gap-14">
+        <div className="max-w-7xl text-center px-8">
           <h1 className="text-pwhite name-desc mb-2">
             <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
             Regine Galanaga
@@ -87,7 +87,7 @@ const HomePage = () => {
             {icons.map((item, index) => (
               <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
                 <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
-                <span className="text-hlightGray item-label ">{item.label}</span>
+                <span className="text-hlightGray item-label">{item.label}</span>
               </div>
             ))}
           </div>
