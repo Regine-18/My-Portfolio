@@ -60,7 +60,7 @@ const Header = () => {
   };
 
 
-  if (!mounted) return null; // Avoid rendering until mounted
+  if (!mounted) return null; 
 
   return (
     <header>
@@ -70,7 +70,6 @@ const Header = () => {
         }`}
       >
         <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 h-full relative">
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-white md:hidden"
@@ -82,8 +81,6 @@ const Header = () => {
               <FaBars />
             )}
           </button>
-
-          {/* Logo */}
           <h1 className="text-pwhite text-3xl font-bold mr-8 hidden md:block">
             Reg
             <span className="italic inline-flex items-center">
@@ -91,8 +88,6 @@ const Header = () => {
             </span>
             ne
           </h1>
-
-          {/* Desktop Navigation Items */}
           <div className="hidden md:flex md:space-x-6 lg:space-x-12 items-center gap-2">
             {navLinks.map((item) => (
               <Link
@@ -104,16 +99,12 @@ const Header = () => {
               </Link>
             ))}
           </div>
-
-          {/* Night Mode Toggle */}
           {!isMenuOpen && (
             <button onClick={toggleTheme} className="text-white lg:ml-12 ml-8">
             {theme === 'dark' ? <FiSun className="text-yellow-400" /> : <FiMoon />}
           </button>
           )}
         </div>
-
-        {/* Mobile Menu Items */}
         <div
           className={`md:hidden absolute top-0 left-0 right-0 bg-dark-mode overflow-hidden transition-all duration-500 ${
             isMenuOpen ? 'h-screen' : 'h-0'
@@ -125,7 +116,7 @@ const Header = () => {
                 key={item.name}
                 href={item.link}
                 className="block ml-6 text-white hover:text-gray-300 mb-2"
-                onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>

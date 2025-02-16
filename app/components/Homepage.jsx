@@ -52,14 +52,14 @@ const HomePage = () => {
         />
       </div>
       <div className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center min-h-screen h-screen gap-14 md:gap-14">
-        <div className="max-w-7xl text-center px-8">
+        <div className="max-w-7xl text-center px-10">
           <h1 className="text-pwhite name-desc mb-2">
             <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
             Regine Galanaga
             <span className="hidden sm:inline">, your</span>
           </h1>
           <h2 className="text-dark-seafoam job-desc">
-            Web Developer & Freelance UI/UX Designer
+            Web Developer & Freelancer
           </h2>
           <p className="detailed mt-2 mb-6">
             <span className="text-darkPaleDescription">With a </span>
@@ -72,13 +72,13 @@ const HomePage = () => {
             <span className="text-hlightGray hidden sm:inline"> sharp attention to detail</span>
             <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
           </p>
-          <button className="my-4">
+          <button className="my-2">
             <a
               href="#portfolio"
               className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
               aria-label="Explore my portfolio"
             >
-              Explore my portfolio
+              Explore portfolio
             </a>
           </button>
         </div>

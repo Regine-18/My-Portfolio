@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Default*/
 *{
   margin: 0;
   padding: 0;
 }
-
 body, html {
+  font-family: var(--font-poppins), sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -17,11 +16,19 @@ body, html {
 }
 
 h1, h2, h3 {
-  font-size: clamp(1.2rem, 5vw, 2.2rem); 
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
 }
 
- .detailed, #about-me p, #skills, #services p, #contact{
-  font-size: clamp(1.1rem, 4vw, 1.2rem);
+p{
+  font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
+.name-desc, .job-desc{
+  letter-spacing: 1px;
+}
+
+.item-label{
+  font-size: clamp(1.3rem, 3vw, 1rem); 
 }
 
 button, input {
@@ -35,7 +42,6 @@ button, input {
 
 .job-desc {
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 .section-title {
@@ -54,12 +60,6 @@ button, input {
 
 /**/
 /* Homepage Styles */
-.item-label{
-  font-size:clamp(1.5rem, 1vw, 2rem);
-  line-height: 1rem;
-  letter-spacing: 1px;
-}
-
 .nav-link {
   position: relative;
   display: inline-block;
@@ -89,7 +89,6 @@ button, input {
   visibility: visible;
 }
 
-
 .image-fade {
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
@@ -100,7 +99,7 @@ button, input {
 }
 
 .icon-track {
-  animation: slide-left 15s linear infinite; 
+  animation: slide-left 15s linear infinite;
   gap: 30px;
 }
 
@@ -115,23 +114,15 @@ button, input {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
 }
 
 
 /* About Me Animations */
 .nav-container{
-  padding-left: 1.6rem; 
-  padding-right: 1.6rem; 
-}
-
-.home-info, .about-me, .skills, .portfolio{
-  margin: 1.6rem;
-}
-
-#services{
-  margin: 1.3rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 /* TravelImage animation */
@@ -179,32 +170,51 @@ h3.service-title {
 
 /* Media Queries */
 @media (max-width: 425px) {
+  .name-desc {
+    font-size: clamp(2rem, 3vw, 2rem); 
+  }
+  .job-desc{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
   p .quo {
     font-size: clamp(1.3rem, 4.5vw, 1.6rem);
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 425px) and (max-width: 1024px) {
+  .name-desc {
+    font-size: clamp(2.5rem, 3vw, 2rem); /* Adjusted for better scaling */
+    line-height: 2.5rem;
+  }
+  .job-desc{
+    font-size: clamp(1.8rem, 3vw, 2rem); /* Adjusted for better scaling */
+    line-height: 2.3rem;
+  }
 
   .icon-size {
     font-size: clamp(2rem, 4.5vw, 2.8rem);
   }
 
   p .quo {
-    font-size: clamp(1.6rem, 4.5vw, 1.6rem);
+    font-size: clamp(1.4rem, 4.5vw, 1.5rem);
     margin-top: 2rem;
   }
 
 }
 
 @media (min-width: 1024px) {
+  .name-desc {
+    font-size: clamp(3rem, 4vw, 2rem);
+    line-height: 2.8rem;
+  }
   p .quo{
     font-size: clamp(.18rem, 4.5vw, 1.6rem);
     margin-top: 2rem;
   }
 }
 
+/* Float animation for social icons */
 .contact-section .social-icons a {
   animation: float 3s infinite ease-in-out;
 }

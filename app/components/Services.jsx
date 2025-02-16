@@ -40,9 +40,9 @@ const Services = () => {
         <div className="section-title text-center">
           <h1 className="font-bold text-white">Services</h1>
           <h2>
-            <span className="text-pblue">Sailing</span>
-            <span className="text-pwhite">beyond</span>
-            <span className="text-pblue">expectations</span>
+            <span className="text-pblue">Sailing </span>
+            <span className="text-pwhite">beyond </span>
+            <span className="text-pblue">expectations </span>
           </h2>
         </div>
         {state.isMobile ? (

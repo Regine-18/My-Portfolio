@@ -8,11 +8,10 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 
 export default function Home() {
-
   return (
     <ThemeProvider attribute="class">
-      <div className="bg-light-mode dark:bg-dark-mode oceanFog">
-        <Homepage />
+      <div className="bg-lightMode dark:bg-darkMode">
+          <Homepage />
           <About />
           <Skills />
           <Services />

@@ -38,19 +38,13 @@ module.exports = {
         rgba(5, 40, 67) 26%, 
         rgba(11, 35, 53) 43%, 
         rgba(12, 27, 38) 100%)`,
-      'light-mode': `linear-gradient(to bottom, 
+      lightMode: `linear-gradient(to bottom, 
         rgba(92, 129, 162, 1) 1%,   /* #5c81a2 */
         rgba(3, 78, 136, 1) 8%,    /* #034e88 */
         rgba(7, 42, 69, 1) 40%,
        rgba(7, 47, 69, 1) 70%,
         rgba(1, 28, 51, 1) 100%    /* #011c33 */)`, /* Deep Ocean Blue */
-        oceanFog: `linear-gradient(to bottom, 
-        rgba(92, 129, 162, 0.7) 1%,    /* #5c81a2 */
-        rgba(3, 78, 136, 0.7) 8%,    /* #034e88 */
-         rgba(3, 78, 136, 0.7) 8%, 
-        rgba(1, 28, 51, 0.8) 45%, 
-       rgba(200, 200, 200, 0.2) 100%)`, /* Deep Ocean Blue */
-      'dark-mode': `linear-gradient(to bottom, 
+      darkMode: `linear-gradient(to bottom, 
          rgba(0, 27, 48, 0.7) 3%,
         rgba(23, 50, 71, 0.8) 15%,  /* #173247 with 0.8 opacity */
         rgba(5, 40, 67, 0.8) 30%, 
