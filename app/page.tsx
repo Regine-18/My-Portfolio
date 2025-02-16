@@ -11,9 +11,7 @@ export default function Home() {
 
   return (
     <ThemeProvider attribute="class">
-      {/* Apply dynamic background color based on the current theme */}
       <div className="bg-light-mode dark:bg-dark-mode oceanFog">
-        {/* Section Components */}
         <Homepage />
         <section id="about-me">
           <About />

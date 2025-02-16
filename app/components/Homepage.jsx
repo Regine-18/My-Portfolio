@@ -1,11 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
 import Header from './Header';
-import { FaTerminal, FaBootstrap, FaCss3Alt, FaReact, FaJava, FaLeaf, FaGithub, FaPaintBrush, FaPencilAlt, FaMicrosoft, FaSlack, FaGoogleDrive } from 'react-icons/fa';
+import { FaTerminal, 
+  FaBootstrap, 
+  FaCss3Alt, 
+  FaReact, 
+  FaJava, 
+  FaLeaf, 
+  FaGithub, 
+  FaPaintBrush, 
+  FaPencilAlt, 
+  FaMicrosoft, 
+  FaSlack, 
+  FaGoogleDrive
+ } from 'react-icons/fa';
 import backgroundImage from '../public/images/mountain-home.png'
 
 const HomePage = () => {
-  // Array of icons and their labels
   const icons = [
     { Icon: FaTerminal, label: 'VS Code' },
     { Icon: FaBootstrap, label: 'Bootstrap' },
@@ -23,7 +34,6 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen md:h-screen">
-      {/* Background Image */}
       <Header />
       <div className="relative">
         <Image
@@ -36,13 +46,11 @@ const HomePage = () => {
           style={{
             width: '100%',
             height: 'auto',
-            objectFit: 'cover', // Ensures the image fills the container
+            objectFit: 'cover',
           }}
         />
       </div>
-      {/* Content Section */}
       <section className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center sm:min-h-screen h-screen px-4 my-6 gap-14 md::gap-8">
-        {/* Home Info */}
         <div className="home-info max-w-7xl text-center">
           <h1 className="text-pwhite name-desc mb-2">
             <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
@@ -74,7 +82,6 @@ const HomePage = () => {
             </a>
           </button>
         </div>
-        {/* Tech Skills Section - Positioned near bottom but balanced */}
         <div className="icon-slider overflow-x-auto scroll-snap-x mandatory flex justify-center items-center w-full">
           <div className="icon-track flex flex-nowrap gap-6">
             {icons.map((item, index) => (

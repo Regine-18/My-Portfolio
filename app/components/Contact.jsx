@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Contact = () => (
   <div className="flex flex-col justify-center items-center text-center px-10 min-h-screen">
@@ -18,15 +18,13 @@ const Contact = () => (
     <div className="my-6">
       <h1 className="text-pwhite">Email</h1>
       <p className="text-white">reginegalanaga97@gmail.com</p>
-
       <h1 className="text-pwhite mt-4">Ready to dive in?</h1>
       <button className="mt-4 px-6 py-3 bg-seafoam text-white text-lg font-semibold rounded-full hover:bg-pwhite transition transform hover:scale-105">
         Hire me
       </button>
-
       <h1 className="text-pwhite mt-8">Let&#39;s connect</h1>
       <div className="social-icons flex justify-center space-x-6 mt-4">
-        {[FaInstagram, FaFacebook, FaTwitter, FaLinkedin].map((Icon, index) => (
+        {[FaInstagram, FaTwitter, FaLinkedin].map((Icon, index) => (
           <a
             key={index}
             href={`https://www.${Icon.name.toLowerCase()}.com`}
@@ -39,7 +37,6 @@ const Contact = () => (
           </a>
         ))}
       </div>
-
       <p className="text-pwhite my-12 mb-3" id="copy-right">
         Designed in <span className="text-pblue italic">Figma</span>, developed in <span className="text-pblue italic">Visual Studio Code</span> with
         <span className="text-pblue italic"> Next.js</span> and <span className="text-pblue italic">Tailwind CSS</span>, 

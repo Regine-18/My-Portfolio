@@ -45,7 +45,7 @@ const Services = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   const handleExpand = (index) => {
-    setExpandedIndex(index === expandedIndex ? null : index); // Toggle expansion
+    setExpandedIndex(index === expandedIndex ? null : index);
   };
 
   return (
@@ -59,11 +59,8 @@ const Services = () => {
             <span className="text-pblue">expectations</span>
           </h2>
         </div>
-
-        {/* Show carousel on desktop and tablets with responsive settings */}
         <div className="hidden md:block relative">
           <div className="flex items-center justify-between">
-            {/* Left Button */}
             <button
               onClick={() => swiperInstance?.slidePrev()}
               className="mr-2 text-2xl text-blue-500 hover:text-blue-700"
@@ -108,8 +105,6 @@ const Services = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* Right Button */}
             <button
               onClick={() => swiperInstance?.slideNext()}
               className="ml-2 text-2xl text-blue-500 hover:text-blue-700"
@@ -117,8 +112,6 @@ const Services = () => {
               <FaArrowRight size={30} className="rounded-full bg-seafoam w-10 h-10 py-2 flex items-center justify-center" />
             </button>
           </div>
-
-          {/* Pagination */}
           <div className="swiper-pagination absolute bottom-0 w-full text-center py-4">
           </div>
         </div>

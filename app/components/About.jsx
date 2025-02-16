@@ -1,17 +1,18 @@
 
-"use client"; // Add this at the top
+"use client";
 
-import ImagesGallery from '../components/ImagesGallery';  // Import the ImagesGallery component
+import ImagesGallery from './ImagesGallery';
 import { useState } from 'react';
 
 const About = () => {
-
-  const [isSecondColumnVisible, setIsSecondColumnVisible] = useState(false);
-  const [isTextVisible, setIsTextVisible] = useState(false);
-
-  const handleArrowClick = () => {
-    setIsSecondColumnVisible(prev => !prev);
-    setIsTextVisible(prev => !prev); // Toggle text visibility when the arrow is clicked
+  const [state, setState] = useState({
+    displayImage: false, 
+  })
+  const handleToggleImage = () => {
+    setState((prev) => ({
+      ...prev,
+      displayImage: !state.displayImage
+    }))
   };
 
   return (
@@ -43,9 +44,7 @@ const About = () => {
           </span>
           <br />
         </p>
-
-        {/* Conditionally render the text */}
-        {isTextVisible && (
+        {state.displayImage && (
           <p className="sm:text-start md:text-center">
             <span className="text-pblue">
               When I am not at my desk meeting deadlines, I can often be found chasing sunsets by the beach, scaling mountains to savor breathtaking views,
@@ -58,24 +57,21 @@ const About = () => {
           </p>
         )}
         <div className="flex flex-col items-center">
-          {isSecondColumnVisible && (
+          {state.displayImage && (
             <div className="max-w-7xl mx-auto overflow-x-auto">
               <div className="flex space-x-4">
-                {/* Display the ImagesGallery component here */}
                 <ImagesGallery />
               </div>
             </div>
           )}
-
-          {/* Arrow button */}
           <button
-            onClick={handleArrowClick}
+            onClick={handleToggleImage}
             className="rounded-full p-2  bg-customBlue text-white hover:bg-pblue transition-colors duration-300"
             aria-label="Click for more"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`w-6 h-6 transform transition-all duration-500 ${isSecondColumnVisible ? "rotate-180" : ""}`}
+              className={`w-6 h-6 transform transition-all duration-500 ${state.displayImage ? "rotate-180" : ""}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
