@@ -11,34 +11,31 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure full height */
 }
 ::-webkit-scrollbar {
   display: none; /* Hides the vertical scrollbar */
 }
 
 h1, h2, h3 {
-  font-size: clamp(1.2rem, 5vw, 2.2rem); /* Responsive font size */
+  font-size: clamp(1.2rem, 5vw, 2.2rem); 
 }
 
- /* Adjust the paragraph font size across sections */
  .detailed, #about-me p, #skills, #services p, #contact{
-  font-size: clamp(1.1rem, 4vw, 1.2rem); /* Made slightly smaller */
+  font-size: clamp(1.1rem, 4vw, 1.2rem);
 }
-
 
 button, input {
   letter-spacing: .6px;
-  font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .logo-name {
-  font-size: clamp(1rem, 5vw, 2.2rem); /* Responsive font size */
+  font-size: clamp(1rem, 5vw, 2.2rem);
 }
 
 .job-desc {
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive font size */
+  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
 .section-title {
@@ -51,12 +48,11 @@ button, input {
 }
 
 #copy-right{
-  font-size: clamp(.8rem, .1vw, 1rem); /* Responsive font size */
+  font-size: clamp(.8rem, .1vw, 1rem);
   line-height: 1.3rem;
 }
 
 /**/
-
 /* Homepage Styles */
 .nav-link {
   position: relative;
@@ -98,7 +94,7 @@ button, input {
 }
 
 .icon-track {
-  animation: slide-left 15s linear infinite; /* Reduced duration */
+  animation: slide-left 15s linear infinite; 
   gap: 30px;
 }
 
@@ -113,19 +109,17 @@ button, input {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%); /* Reduced animation distance */
+    transform: translateX(-50%); 
   }
 }
 
 
 /* About Me Animations */
 .nav-container{
-  padding-left: 1.6rem;  /* Adds padding to the left side */
-  padding-right: 1.6rem; /* Adds padding to the right side */
+  padding-left: 1.6rem; 
+  padding-right: 1.6rem; 
 }
 
-
-/* Apply equal margin to section*/
 .home-info, .about-me, .skills, .portfolio{
   margin: 1.6rem;
 }
@@ -172,18 +166,16 @@ button, input {
 
 /*Services*/
 h3.service-title {
-  font-size: clamp(1rem, 4vw, 1.3rem); /* Adjusted for smaller devices */
+  font-size: clamp(1rem, 4vw, 1.3rem);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 
 /* Media Queries */
-
-/* For small screens: max-width 425px */
 @media (max-width: 425px) {
   .name-desc {
-    font-size: clamp(2.8rem, 4vw, 2.3rem); /* Adjusted for better scaling */
+    font-size: clamp(2.8rem, 4vw, 2.3rem);
     line-height: 2.8rem;
     letter-spacing: 1px;
   }
@@ -193,13 +185,7 @@ h3.service-title {
   }
 }
 
-/* For medium screens: min-width 426px to max-width 1023px */
 @media (min-width: 426px) and (max-width: 1023px) {
-  .name-desc {
-    font-size: clamp(3rem, 4vw, 2.3rem); /* Adjusted for better scaling */
-    line-height: 2.8rem;
-    letter-spacing: 1px;
-  }
 
   .icon-size {
     font-size: clamp(2rem, 4.5vw, 2.8rem);
@@ -212,16 +198,14 @@ h3.service-title {
 
 }
 
-/* For large screens: min-width 1024px */
 @media (min-width: 1024px) {
-
   .name-desc {
-    font-size: clamp(3.5rem, 4vw, 2.3rem); /* Adjusted for better scaling */
+    font-size: clamp(3.5rem, 4vw, 2.3rem);
     line-height: 2.8rem;
     letter-spacing: 1px;
   }
   .item-label {
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
   }
   p .quo{
     font-size: clamp(.18rem, 4.5vw, 1.6rem);
@@ -229,7 +213,6 @@ h3.service-title {
   }
 }
 
-/* Float animation for social icons */
 .contact-section .social-icons a {
   animation: float 3s infinite ease-in-out;
 }

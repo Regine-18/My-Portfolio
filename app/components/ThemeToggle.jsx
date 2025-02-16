@@ -13,7 +13,7 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); // Persist theme choice
+    localStorage.setItem('theme', newTheme); 
   };
 
   return { theme, toggleTheme, mounted };

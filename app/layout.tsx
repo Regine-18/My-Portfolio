@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans} from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunitoSans.variable}  antialiased`}
+        className={`${nunitoSans.variable} antialiased`}
       >
         {children}
       </body>

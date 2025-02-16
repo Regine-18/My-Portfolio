@@ -1,6 +1,4 @@
-
 "use client";
-
 import ImagesGallery from './ImagesGallery';
 import { useState } from 'react';
 
@@ -16,7 +14,8 @@ const About = () => {
   };
 
   return (
-    <div className="about-me flex flex-col items-center justify-center min-h-screen" id="about-me">
+    <section className="about-me">
+    <div className="flex flex-col items-center justify-center" id="about-me">
       <div className="w-full max-w-7xl px-4">
         <div className='section-title text-center'>
           <h1 className="font-bold text-white">About me</h1>
@@ -87,6 +86,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

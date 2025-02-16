@@ -13,21 +13,11 @@ export default function Home() {
     <ThemeProvider attribute="class">
       <div className="bg-light-mode dark:bg-dark-mode oceanFog">
         <Homepage />
-        <section id="about-me">
           <About />
-        </section>
-        <section id="skills">
           <Skills />
-        </section>
-        <section id="services">
           <Services />
-        </section>
-        <section id="portfolio">
           <Portfolio />
-        </section>
-        <section id="contact">
           <Contact />
-        </section>
       </div>
     </ThemeProvider>
   );

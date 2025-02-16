@@ -33,7 +33,8 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen md:h-screen">
+    <section id="home">
+    <div className="min-h-screen">
       <Header />
       <div className="relative">
         <Image
@@ -50,8 +51,8 @@ const HomePage = () => {
           }}
         />
       </div>
-      <section className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center sm:min-h-screen h-screen px-4 my-6 gap-14 md::gap-8">
-        <div className="home-info max-w-7xl text-center">
+      <div className="absolute z-10 w-full flex flex-grow flex-col justify-center items-center min-h-screen h-screen px-4 gap-14 md:gap-14">
+        <div className="max-w-7xl text-center">
           <h1 className="text-pwhite name-desc mb-2">
             <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
             Regine Galanaga
@@ -71,7 +72,6 @@ const HomePage = () => {
             <span className="text-hlightGray hidden sm:inline"> sharp attention to detail</span>
             <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
           </p>
-
           <button className="my-4">
             <a
               href="#portfolio"
@@ -87,13 +87,14 @@ const HomePage = () => {
             {icons.map((item, index) => (
               <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
                 <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
-                <span className="text-hlightGray item-label">{item.label}</span>
+                <span className="text-hlightGray item-label ">{item.label}</span>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </div>
+    </section>
   );
 };
 
