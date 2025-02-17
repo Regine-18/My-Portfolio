@@ -1,49 +1,46 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { FaBars, FaTimes, FaPaintBrush } from 'react-icons/fa';
-import useThemeToggle from './ThemeToggle'; // Import custom hook
+import useThemeToggle from './ThemeToggle'; 
+import { navLinks } from '../constants/navLinks';
 
 const Header = () => {
-  const { theme, toggleTheme, mounted } = useThemeToggle(); // Use the custom hook
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const { theme, toggleTheme, mounted } = useThemeToggle();
+  const [state, setState] = useState({
+    isMenuOpen: false,
+    activeSection: '',
+    isScrolled: false,
+    windowWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
+  });
 
-  const navLinks = [
-    { name: 'Home', link: '#home' },
-    { name: 'About', link: '#about-me' },
-    { name: 'Skills', link: '#skills' },
-    { name: 'Services', link: '#services' },
-    { name: 'Portfolio', link: '#portfolio' },
-    { name: 'Contact', link: '#contact' },
-  ];
-
-  // This effect will only run on the client
+  // Handle resizing and scrolling
   useEffect(() => {
+    const handleResize = () => {
+      setState((prevState) => ({ ...prevState, windowWidth: window.innerWidth }));
+    };
 
-    const handleResize = () => setWindowWidth(window.innerWidth);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setState((prevState) => ({ ...prevState, isScrolled: window.scrollY > 50 }));
       updateActiveSection(window.scrollY);
     };
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Ensure theme is only applied after the component is mounted (avoid hydration issues)
   useEffect(() => {
-    if (windowWidth >= 768) setIsMenuOpen(false);
-  }, [windowWidth]);
+    if (state.windowWidth >= 768) {
+      setState((prevState) => ({ ...prevState, isMenuOpen: false }));
+    }
+  }, [state.windowWidth]);
 
   const updateActiveSection = (scrollY) => {
     navLinks.forEach((item) => {
@@ -53,29 +50,27 @@ const Header = () => {
         const sectionHeight = section.offsetHeight;
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          setActiveSection(item.name);
+          setState((prevState) => ({ ...prevState, activeSection: item.name }));
         }
       }
     });
   };
 
 
-  if (!mounted) return null; 
-
   return (
     <header>
       <nav
         className={`nav-container fixed top-0 z-50 w-full p-4 transition-all duration-300 ${
-          isScrolled ? 'dark:bg-darkGradient bg-lightGradient' : 'shadow-md'
+          state.isScrolled ? 'dark:bg-darkGradient bg-lightGradient' : 'shadow-md'
         }`}
       >
-        <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-4 h-full relative">
+        <div className="flex justify-between items-center max-w-5xl mx-auto px-4 h-full relative">
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: !prevState.isMenuOpen }))}
             className="text-white md:hidden"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={state.isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {isMenuOpen ? (
+            {state.isMenuOpen ? (
               <FaTimes className="absolute top-2 left-2 text-2xl z-50" />
             ) : (
               <FaBars />
@@ -93,21 +88,21 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.link}
-                className={`nav-link text-white ${activeSection === item.name ? 'active' : ''}`}
+                className={`nav-link text-white ${state.activeSection === item.name ? 'active' : ''}`}
               >
                 {item.name}
               </Link>
             ))}
           </div>
-          {!isMenuOpen && (
+          {!state.isMenuOpen && (
             <button onClick={toggleTheme} className="text-white lg:ml-12 ml-8">
-            {theme === 'dark' ? <FiSun className="text-yellow-400" /> : <FiMoon />}
-          </button>
+              {theme === 'dark' ? <FiSun className="text-yellow-400" /> : <FiMoon />}
+            </button>
           )}
         </div>
         <div
           className={`md:hidden absolute top-0 left-0 right-0 bg-dark-mode overflow-hidden transition-all duration-500 ${
-            isMenuOpen ? 'h-screen' : 'h-0'
+            state.isMenuOpen ? 'h-screen' : 'h-0'
           }`}
         >
           <div className="flex flex-col items-start mt-16">
@@ -116,7 +111,7 @@ const Header = () => {
                 key={item.name}
                 href={item.link}
                 className="block ml-6 text-white hover:text-gray-300 mb-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
               >
                 {item.name}
               </Link>

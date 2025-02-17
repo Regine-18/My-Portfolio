@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const About = () => {
   const [state, setState] = useState({
-    displayImage: false, 
+    displayImage: false,
   })
   const handleToggleImage = () => {
     setState((prev) => ({
@@ -14,9 +14,8 @@ const About = () => {
   };
 
   return (
-    <section className="about-me">
-    <div className="flex flex-col items-center justify-center" id="about-me">
-      <div className="w-full max-w-7xl px-4">
+    <section>
+    <div className="max-w-5xl mx-auto flex flex-col items-center justify-center min-h-screen px-10">
         <div className='section-title text-center'>
           <h1 className="font-bold text-white">About me</h1>
           <h2 className="text-pblue">A masbateña riding the <span className='italic text-pwhite'>waves</span> of innovation</h2>
@@ -34,7 +33,6 @@ const About = () => {
             bookkeeping with honors, I navigate the challenges of each
             project like an adventurous island girl riding the waves,
             embracing the excitement of every new opportunity.
-
             My journey is a vibrant blend of innovation and artistry,
             where each click resonates like waves crashing on the shore—powerful
             and exhilarating. Fueled by a love for learning and an unwavering
@@ -44,10 +42,12 @@ const About = () => {
           <br />
         </p>
         {state.displayImage && (
-          <p className="sm:text-start md:text-center">
+          <p className="justify sm:text-start md:text-center">
             <span className="text-pblue">
-              When I am not at my desk meeting deadlines, I can often be found chasing sunsets by the beach, scaling mountains to savor breathtaking views,
-              or immersing myself in the serenity of remote islands. Whether I am conquering peaks or writing code, I bring the same passion and dedication.
+              When I am not at my desk meeting deadlines, I can often be found chasing sunsets by 
+              the beach, scaling mountains to savor breathtaking views,
+              or immersing myself in the serenity of remote islands. Whether I am conquering peaks or writing 
+              code, I bring the same passion and dedication.
             </span>
             <br />
             <span className="quo italic text-hlightGray">
@@ -57,7 +57,7 @@ const About = () => {
         )}
         <div className="flex flex-col items-center">
           {state.displayImage && (
-            <div className="max-w-7xl mx-auto overflow-x-auto">
+            <div className="max-w-4xl overflow-x-auto">
               <div className="flex space-x-4">
                 <ImagesGallery />
               </div>
@@ -85,7 +85,6 @@ const About = () => {
           </button>
         </div>
       </div>
-    </div>
     </section>
   );
 };
