@@ -7,7 +7,7 @@ import { travels } from "../constants/travels";
 import Image from "next/image";
 import motionWrapper from "../constants/motion/motionWrapper";
 import { animationVariants } from "../constants/motion/animations";
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowUp } from 'react-icons/fa';
 import Link from "next/link";
 
 const About = () => {
@@ -63,9 +63,21 @@ const About = () => {
           <span className="text-white font-semibold">Word</span>, and
           <span className="text-white font-semibold"> PowerPoint</span>, enhancing productivity and efficiency in my projects.
         </motion.p>
-        <a href="/reginegalanaga.pdf" target="_blank" rel="noopener noreferrer">
-        Click here to open PDF
-      </a>     
+        <motion.a
+          href="/reginegalanaga.pdf"
+          className="flex items-center bg-deepBlue px-4 py-2 rounded-full text-white w-auto max-w-[200px] justify-center"
+          target="_blank"
+          rel="noopener noreferrer"
+          variants={animationVariants.paragraph}
+        >
+          View Resume
+          <FaArrowUp
+            style={{
+              transform: 'rotate(45deg)',
+              marginLeft: '8px',
+            }}
+          />
+        </motion.a>
         <motion.p className="text-paleGray text-lg leading-relaxed md:text-left mt-4" variants={animationVariants.paragraph}>
           If you don’t find me at my desk coding, you’ll likely catch me by the beach, chasing the waves,
           or scaling mountains in search of new heights. Whether embracing the tides or creativity, I approach every challenge
