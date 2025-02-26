@@ -8,6 +8,7 @@ import Image from "next/image";
 import about from "../public/images/about.jpg";
 import motionWrapper from "../constants/motion/motionWrapper";
 import { animationVariants } from "../constants/motion/animations";
+import { FaArrowDown } from 'react-icons/fa';
 
 const About = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -26,7 +27,7 @@ const About = () => {
             alt="About Image"
             fill
             style={{ objectFit: "cover" }}
-            className="rounded-lg shadow-md filter brightness-75 contrast-125"
+            className="rounded-lg shadow-md filter brightness-75 contrast-125 image-"
           />
         </motion.div>
         <motion.div variants={animationVariants.paragraph}>
@@ -95,4 +96,3 @@ const About = () => {
 };
 
 export default motionWrapper(About, "container");
-
