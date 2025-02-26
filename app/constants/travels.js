@@ -1,10 +1,6 @@
-import sagada from '../public/images/travelImages/IMG_05981.png';
-import baguio from '../public/images/travelImages/IMG_4785.png';
-import tagaytay from '../public/images/travelImages/IMG_20220620_163735.jpg';
-
 export const travels = [
   {
-    desktopSrc: sagada,
+    desktopSrc: "/images/travelImages/IMG_05981.png",
     alt: 'Sagada 2023',
     title: 'Sagada 2023',
     description: 'Bold brews, cave climbs, and perfect food fixes. A true taste of adventure!',
@@ -14,7 +10,7 @@ export const travels = [
     additionalContent: `The coffee, the food, and the fresh air make me want to go back. Sagada isn’t just a place—it’s a taste of experience I’ll never forget.`
   },
   {
-    desktopSrc: baguio,
+    desktopSrc: "/images/travelImages/IMG_4785.png",
     alt: 'Baguio 2022',
     title: 'Baguio 2022',
     description: 'Exploring Baguio: Cool breeze, scenic views, and unforgettable moments',
@@ -22,7 +18,7 @@ export const travels = [
     additionalContent: `Maybe Baguio didn’t feel as memorable because I missed out on hidden gems, local flavors, or a charming café. But the place had its own charm—definitely worth a second visit!`
   },
   {
-    desktopSrc: tagaytay,
+    desktopSrc: "/images/travelImages/IMG_20220620_163735.jpg",
     alt: 'Tagaytay 2022',
     title: 'Tagaytay 2022',
     description: 'Strolling to the coffee shop in Tagaytay, savoring the morning breeze and Taal’s breathtaking view',
