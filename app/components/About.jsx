@@ -1,92 +1,98 @@
-"use client";
-import ImagesGallery from './ImagesGallery';
-import { useState } from 'react';
+'use client'
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import ImagesGallery from "./ImagesGallery";
+import { travels } from "../constants/travels";
+import Image from "next/image";
+import about from "../public/images/about.jpg";
+import motionWrapper from "../constants/motion/motionWrapper";
+import { animationVariants } from "../constants/motion/animations";
 
 const About = () => {
-  const [state, setState] = useState({
-    displayImage: false,
-  })
-  const handleToggleImage = () => {
-    setState((prev) => ({
-      ...prev,
-      displayImage: !state.displayImage
-    }))
-  };
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section>
-    <div className="max-w-5xl mx-auto flex flex-col items-center justify-center min-h-screen px-10">
-        <div className='section-title text-center'>
-          <h1 className="font-bold text-white">About me</h1>
-          <h2 className="text-pblue">A masbateña riding the <span className='italic text-pwhite'>waves</span> of innovation</h2>
-        </div>
-        <h3 className="text-center text-pblue title-holder mb-4">
-          NCIII Holder in Bookkeeping with <span className="text-pwhite">Honors</span>
-        </h3>
-        <p className="mb-4 sm:text-start md:text-center">
-          <span className="text-hlightGray" id="desc-intro">
-            Once a Masbateña with zero skills—not even the basics of computer commands—I boldly leaped into the tech world,
+    <section className="min-h-screen">
+      <div className="max-w-5xl mx-auto px-7 sm:px-12 md:px-20 grid gap-2">
+        <motion.h1 variants={animationVariants.title}>
+          <span className="block mt-2 text-4xl sm:text-5xl md:text-6xl text-white font-semibold">
+            A <span className="text-blue">masbateña</span> riding the waves of innovation
           </span>
-          <span className="text-pblue">
-            transforming my passion for traditional arts into
-            tech-savvy creativity. Now, as a proud NC III holder in
-            bookkeeping with honors, I navigate the challenges of each
-            project like an adventurous island girl riding the waves,
-            embracing the excitement of every new opportunity.
-            My journey is a vibrant blend of innovation and artistry,
-            where each click resonates like waves crashing on the shore—powerful
-            and exhilarating. Fueled by a love for learning and an unwavering
-            determination, I chart my course toward success with enthusiasm and
-            pride.
-          </span>
-          <br />
-        </p>
-        {state.displayImage && (
-          <p className="justify sm:text-start md:text-center">
-            <span className="text-pblue">
-              When I am not at my desk meeting deadlines, I can often be found chasing sunsets by 
-              the beach, scaling mountains to savor breathtaking views,
-              or immersing myself in the serenity of remote islands. Whether I am conquering peaks or writing 
-              code, I bring the same passion and dedication.
+        </motion.h1>
+        <motion.div className="h-[300px] relative" variants={animationVariants.image}>
+          <Image
+            src={about}
+            alt="About Image"
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg shadow-md filter brightness-75 contrast-125"
+          />
+        </motion.div>
+        <motion.div variants={animationVariants.paragraph}>
+          <div className="flex items-center gap-4">
+            <span className="w-[3px] h-12 bg-deepBlue"></span>
+            <span className="text-white text-xl lg:text-2xl">
+              From zero knowledge of computer commands to a tech-savvy creative.
             </span>
-            <br />
-            <span className="quo italic text-hlightGray">
-              — because every adventure, like every project, is a journey worth embracing.
-            </span>
+          </div>
+          <p className="text-lg leading-relaxed text-paleGray mt-4">
+            My journey is one of bold transformation. I blend innovation with artistry,
+            turning my passion for traditional arts into dynamic digital solutions.
           </p>
+        </motion.div>
+        <motion.p
+          className="mt-4 text-paleGray text-lg leading-relaxed"
+          variants={animationVariants.paragraph}
+        >
+          <span className="text-white font-semibold">HTML & CSS</span>,
+          <span className="text-white font-semibold"> Bootstrap</span>,
+          <span className="text-white font-semibold"> Tailwind</span>,
+          <span className="text-white font-semibold"> JavaScript</span>,
+          <span className="text-white font-semibold"> Java (OOP)</span>, and
+          <span className="text-white font-semibold"> PHP & MySQL</span>, I craft seamless and responsive web applications.
+          I also have experience with frameworks such as
+          <span className="text-white font-semibold"> React.js</span> and
+          <span className="text-white font-semibold"> Spring Boot</span>, allowing me to build dynamic and scalable solutions.
+          Additionally, I am proficient in design tools like
+          <span className="text-white font-semibold"> Canva</span>,
+          <span className="text-white font-semibold"> Adobe</span>, and
+          <span className="text-white font-semibold"> Figma</span>, enabling me to merge functionality with aesthetics.
+          I also have expertise in <span className="text-white font-semibold">Excel</span>,
+          <span className="text-white font-semibold">Word</span>, and
+          <span className="text-white font-semibold"> PowerPoint</span>, enhancing productivity and efficiency in my projects.
+        </motion.p>
+        <motion.p className="text-paleGray text-lg leading-relaxed md:text-left mt-4" variants={animationVariants.paragraph}>
+          If you don’t find me at my desk coding, you’ll likely catch me by the beach, chasing the waves,
+          or scaling mountains in search of new heights. Whether embracing the tides or creativity, I approach every challenge
+          with curiosity and determination, seeing each project as an adventure—where every click, every line of code,
+          is a wave shaping my ever-evolving expertise.
+        </motion.p>
+        <motion.div variants={animationVariants.travels}>
+          <div className="flex flex-wrap items-center gap-4 mt-6">
+            <p className="text-lg text-white">Footprints around the Philippines:</p>
+            <ul className="flex gap-2 flex-wrap cursor-pointer">
+              {travels.map((place, index) => (
+                <motion.li
+                  key={index}
+                  className={`text-lg text-white font-medium bg-deepBlue py-1 px-4 rounded-full shadow-lg cursor-pointer transition ${selectedImage === place ? '' : 'hover:scale-105'}`}
+                  onClick={() => setSelectedImage(place)}
+                >
+                  {place.title}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+        {selectedImage && (
+          <motion.div key={selectedImage.title} variants={animationVariants.travels} initial="hidden" animate="visible" className="mt-6 w-full">
+            <ImagesGallery selectedImage={selectedImage} />
+          </motion.div>
         )}
-        <div className="flex flex-col items-center">
-          {state.displayImage && (
-            <div className="max-w-4xl overflow-x-auto">
-              <div className="flex space-x-4">
-                <ImagesGallery />
-              </div>
-            </div>
-          )}
-          <button
-            onClick={handleToggleImage}
-            className="rounded-full p-2  bg-customBlue text-white hover:bg-pblue transition-colors duration-300"
-            aria-label="Click for more"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={`w-6 h-6 transform transition-all duration-500 ${state.displayImage ? "rotate-180" : ""}`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-        </div>
       </div>
     </section>
   );
 };
 
-export default About; 
+export default motionWrapper(About, "container");
+

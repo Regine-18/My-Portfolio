@@ -16,7 +16,8 @@ const ThemeToggle = () => {
     localStorage.setItem('theme', newTheme); 
   };
 
-  return { theme, toggleTheme, mounted };
+  return { theme: mounted ? theme : 'light', toggleTheme, mounted };
+
 };
 
 export default ThemeToggle;

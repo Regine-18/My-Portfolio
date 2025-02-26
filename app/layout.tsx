@@ -1,10 +1,20 @@
-import { Nunito } from "next/font/google";
+import { Inter, Libre_Baskerville } from "next/font/google";
+import { ThemeProvider } from "next-themes"; 
 import "./globals.css";
 
-const nunito = Nunito({
-  variable: "--font-nunito",
+// Import Inter and Libre Baskerville with proper variable declarations
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"], // You can choose the weights you need
+  weight: ["400", "500", "600", "700", "800", "900"], 
+  display: "swap",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -13,9 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${nunito.variable} antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${libreBaskerville.variable} antialiased`}>
+        <ThemeProvider attribute="class">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

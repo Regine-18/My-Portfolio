@@ -15,19 +15,13 @@ export const services = [
   },
   {
     id: 3,
-    title: 'App Development',
+    title: 'Branding',
     description: 'Creating intuitive and feature-rich mobile applications tailored to your needs.',
     icon: <FaMobileAlt size={40} />,
   },
   {
     id: 4,
     title: 'Content Writing',
-    description: 'Delivering well-crafted and engaging content to effectively communicate your message.',
-    icon: <FaPenNib size={40} />,
-  },
-  {
-    id: 5,
-    title: 'Editing',
     description: 'Delivering well-crafted and engaging content to effectively communicate your message.',
     icon: <FaPenNib size={40} />,
   },

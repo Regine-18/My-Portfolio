@@ -1,102 +1,59 @@
-import React from 'react';
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import Header from './Header';
-import {
-  FaTerminal,
-  FaBootstrap,
-  FaCss3Alt,
-  FaReact,
-  FaJava,
-  FaLeaf,
-  FaGithub,
-  FaPaintBrush,
-  FaPencilAlt,
-  FaMicrosoft,
-  FaSlack,
-  FaGoogleDrive
-} from 'react-icons/fa';
-import backgroundImage from '../public/images/mountain-home.png'
+import motionWrapper from '../constants/motion/motionWrapper.js';
+import { animationVariants } from "../constants/motion/animations";
 
 const HomePage = () => {
-  const icons = [
-    { Icon: FaTerminal, label: 'VS Code' },
-    { Icon: FaBootstrap, label: 'Bootstrap' },
-    { Icon: FaCss3Alt, label: 'CSS' },
-    { Icon: FaReact, label: 'React' },
-    { Icon: FaJava, label: 'Java' },
-    { Icon: FaLeaf, label: 'Spring Boot / MVC' },
-    { Icon: FaGithub, label: 'GitHub' },
-    { Icon: FaPaintBrush, label: 'Adobe Photoshop' },
-    { Icon: FaPencilAlt, label: 'Canva' },
-    { Icon: FaMicrosoft, label: 'Microsoft' },
-    { Icon: FaSlack, label: 'Slack' },
-    { Icon: FaGoogleDrive, label: 'Google Drive' },
-  ];
-
   return (
-    <section>
-      <div className="h-screen">
-        <Header />
-        <div className="relative">
-          <Image
-            src={backgroundImage}
-            alt="Mountain Home"
-            width={1920}
-            height={1080}
-            className="absolute mix-blend-multiply image-fade"
-            priority
-            style={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'cover',
-            }}
-          />
-        </div>
-        <div className="absolute z-10 w-full flex flex-col justify-center h-screen gap-14 md:gap-14">
-        <div className="text-center px-10 max-w-5xl mx-auto">
-            <h1 className="text-pwhite name-desc mb-2">
-              <span className="hidden sm:inline">I<span className="text-pblue">‘</span>m </span>
-              Regine Galanaga
-              <span className="hidden sm:inline">, your</span>
-            </h1>
-            <h2 className="text-dark-seafoam job-desc">
-              Web Developer & Freelancer
-            </h2>
-            <p className="detailed mt-2 mb-6">
-              <span className="text-darkPaleDescription">With a </span>
-              <span className="text-hlightGray">year of experience, </span>
-              <span className="text-darkPaleDescription hidden sm:inline">as a Junior System Developer,</span>
-              <span className="text-darkPaleDescription">I focus on</span>
-              <span className="text-hlightGray"> testing, designing, and web development</span>
-              <span className="text-hlightGray hidden sm:inline"> to create user-centered solutions</span>
-              <span className="text-darkPaleDescription hidden sm:inline">, leveraging my</span>
-              <span className="text-hlightGray hidden sm:inline"> sharp attention to detail</span>
-              <span className="text-darkPaleDescription hidden sm:inline"> and design expertise.</span>
-            </p>
-            <button className="my-2">
-              <a
-                href="#portfolio"
-                className="bg-seafoam-darker px-8 py-4 font-semibold text-white rounded-full cursor-pointer transform transition-all hover:scale-105"
-                aria-label="Explore my portfolio"
-              >
-                Explore portfolio
-              </a>
-            </button>
-          </div>
-          <div className="icon-slider overflow-x-auto flex justify-center items-center w-full">
-            <div className="icon-track flex gap-6">
-              {icons.map((item, index) => (
-                <div key={index} className="flex items-center px-3 flex-shrink-0 text-left gap-3">
-                  <item.Icon className="text-pblue text-icon text-5xl lg:text-6xl" aria-hidden="true" />
-                  <span className="text-hlightGray item-label">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section className="h-screen flex flex-col relative">
+      <Header />
+      <div className="flex flex-1 items-center justify-center w-full">
+        <div className="relative flex flex-col items-start w-full max-w-5xl mx-auto px-7 sm:px-12 md:px-20">
+          <motion.div
+            variants={animationVariants.title}
+            className="absolute right-[-20px] top-[-50px] sm:right-0 sm:top-0 opacity-80"
+          >
+          </motion.div>
+          <motion.h1
+            variants={animationVariants.title}
+            className="text-[clamp(2rem,5vw,5rem)] leading-tight tracking-tight text-white"
+          >
+            <span className="block mt-2 text-4xl sm:text-5xl md:text-6xl font-bold">
+              Hi, I’m <span className="text-blue">Regine Galanaga</span>
+              <br />
+              <span className="text-pblue font-semibold">
+                a Front End Dev. & Freelancer
+              </span>
+            </span>
+          </motion.h1>
+          <motion.p
+            variants={animationVariants.paragraph}
+            className="mt-4 max-w-2xl text-lg text-paleGray leading-relaxed"
+          >
+            A fusion of technology,
+            crafting immersive digital experiences with precision.
+            Specializing in{" "}
+            <span className="text-white font-medium">
+              information management, UI/UX Design & web development
+            </span>.
+          </motion.p>
+          <motion.button
+            variants={animationVariants.button}
+            whileHover={{ scale: 1.05 }}
+            className="bg-deepBlue mt-6 inline-flex items-center gap-2 text-white font-medium px-6 sm:px-8 py-3 rounded-full transition-all transform shadow-md"
+          >
+            <span>Explore My Work</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </motion.button>
         </div>
       </div>
     </section>
   );
 };
 
-export default HomePage;
+export default motionWrapper(HomePage, 'container');
