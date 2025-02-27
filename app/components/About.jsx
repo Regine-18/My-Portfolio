@@ -64,7 +64,7 @@ const About = () => {
           <span className="text-white font-semibold"> PowerPoint</span>, enhancing productivity and efficiency in my projects.
         </motion.p>
         <motion.a
-          href="/reginegalanaga.pdf"
+          href="/resume/reginegalanaga.pdf"
           className="flex items-center bg-deepBlue px-4 py-2 rounded-full text-white w-auto max-w-[200px] justify-center"
           target="_blank"
           rel="noopener noreferrer"
